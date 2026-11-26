@@ -14,7 +14,7 @@ Contrôles locaux effectués le 26 novembre 2026 avec Python 3.12.14.
 | Dernier billet sous concurrence | 8 tentatives simultanées : 1 succès, 7 conflits, aucun dépassement de stock |
 | Configuration Docker Compose | Syntaxe validée |
 | Démarrage du conteneur Docker local | Non exécuté : daemon Docker non démarré sur la machine |
-| Publication Postman | En attente de connexion au compte ; aucune URL publique inventée |
+| Publication Postman | Publiée depuis Postman via Fern le 26/11/2026 ; déploiement Successful et page publique HTTP 200 |
 
 ## Périmètre des tests
 

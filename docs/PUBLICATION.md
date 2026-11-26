@@ -1,25 +1,27 @@
 # Publication Postman
 
-## État du rendu
+## Documentation publique
 
-Collections et environnement prêts, exemples réellement exécutés.
-**Aucune URL Postman publique n'est encore vérifiée** : la connexion au compte
-Postman est nécessaire. Ce point est distinct de Swagger local et du dépôt GitHub.
+[Consulter la documentation My Social Networks API](https://my-social-networks-api.docs.buildwithfern.com/).
 
-## Publier depuis l'interface
+Publication effectuée le 26 novembre 2026 depuis la collection Postman, via
+**Publish docs site**, qui utilise désormais Fern dans ce compte. Le tableau de
+bord indique **Live** et **Successful**. La page publique a été vérifiée dans le
+navigateur et répond HTTP 200 sans authentification. Il s'agit de la documentation ;
+le serveur API reste à lancer localement avec les instructions du README.
 
-1. Se connecter à Postman.
-2. Importer postman/My-Social-Networks.postman_collection.json dans un workspace.
-3. Ouvrir la collection et choisir **View complete documentation**.
-4. Choisir **Publish docs**, puis **Postman**.
-5. Publier sans environnement contenant de vrais jetons ou coordonnées.
-   Les valeurs de jetons du fichier fourni sont vides.
-6. Copier l'URL générée et remplacer la mention « en attente » dans README.md.
-7. Ajouter l'URL dans ce document et pousser la modification au dépôt.
+## Collections importées dans Postman
 
-Procédure officielle :
-[Publier une documentation Postman](https://learning.postman.com/docs/publishing-your-api/publishing-your-docs).
-Certains comptes d'entreprise nécessitent l'approbation de leur Community Manager.
+- [Référence — 93 opérations](https://oussamatarfaoui14-2789685.postman.co/workspace/a00e34b2-a514-4f7e-88e0-f47e9e3b5b9b/collection/60283666-8c28afbe-5724-4b6e-affb-c14c28dfc5ad).
+- [Parcours complet — 100 requêtes](https://oussamatarfaoui14-2789685.postman.co/workspace/a00e34b2-a514-4f7e-88e0-f47e9e3b5b9b/collection/60283666-30b94339-8e78-4cc7-9720-8d74d1fb36cb).
+- Environnement **My Social Networks — Local** importé ; aucun jeton réel inclus.
+
+Les liens du workspace nécessitent les droits du compte Postman. Pour le rendu,
+utiliser le lien public de documentation ci-dessus et le dépôt GitHub. Les exports
+JSON sont également fournis dans le dossier postman/ pour une importation autonome.
+Aucun abonnement payant n'a été souscrit.
+
+## Mise à jour
 
 Après modification de l'API :
 
@@ -27,5 +29,8 @@ Après modification de l'API :
 python scripts/export_docs.py
 ~~~
 
-Importer/remplacer ensuite la collection existante. Vérifier la documentation
-publiée avant de remettre son URL.
+Importer/remplacer la collection existante dans Postman, actualiser la documentation
+via le flux Fern, puis vérifier les pages publiques avant de remettre leur URL.
+
+Procédure officielle :
+[Documenter une collection avec Fern](https://learning.postman.com/docs/fern/document-a-collection).

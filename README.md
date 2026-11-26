@@ -55,9 +55,9 @@ La référence contient les URL, explications fonctionnelles, corps de requêtes
 contrats et exemples de réponses. Elle ne contient aucun véritable secret.
 La référence s'utilise par requête ; le parcours complet respecte l'ordre des dépendances.
 
-**URL de documentation Postman publiée : en attente de connexion au compte Postman.**
-Le fichier [PUBLICATION.md](docs/PUBLICATION.md) indique comment terminer cette
-exigence du rendu ; aucune URL de publication fictive n'est fournie.
+**Documentation publique issue de Postman :** [My Social Networks API](https://my-social-networks-api.docs.buildwithfern.com/).
+Publication réalisée via Fern, intégré à Postman. Les détails et les liens des
+collections sont dans [PUBLICATION.md](docs/PUBLICATION.md).
 
 ## Authentification et conventions
 

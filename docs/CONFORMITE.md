@@ -10,7 +10,7 @@ identifiés dans CONCEPTION.md.
 | 0.1 Endpoints spécifiques | Invitations, participants, partage, résultats de sondage, disponibilité des billets | ENDPOINTS.md, parcours Postman |
 | 0.1 Documentation Postman avec URL, fonctions et retours | Collection de référence de 93 opérations avec exemples et contrats de sortie | Export automatique vérifié |
 | 0.1 Dépôt GitHub/GitLab | Sources, tests, documentation, Docker et CI dans le dépôt | Lien remis avec le projet |
-| 0.1 URL de documentation Postman publiée | Collection prête ; publication conditionnée à la connexion Postman | PUBLICATION.md |
+| 0.1 URL de documentation Postman publiée | Publiée depuis Postman via Fern ; accès public vérifié le 26/11/2026 | PUBLICATION.md |
 | 1.1 Configuration d'événement | Nom, description, début/fin, lieu, couverture, public/privé, organisateurs et participants | Modèles EventCreate/EventInput, tests CRUD |
 | 1.1 Parcours en trois étapes | Configuration, options, publication | Test du brouillon et parcours complet |
 | 1.2 Groupes public/privé/secret | Visibilité et contrôle d'accès | Tests des trois valeurs |
