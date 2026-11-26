@@ -7,8 +7,8 @@ jobs:
       matrix:
         python: ['3.12', '3.13', '3.14']
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.1.0
         with:
           python-version: ${{ matrix.python }}
           cache: pip
@@ -17,7 +17,7 @@ jobs:
       - run: python -m ruff format --check app tests scripts
       - run: python -m pytest --cov=app --cov-report=term-missing
       - run: python scripts/export_docs.py --check
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7.1.0
         with:
           node-version: '22'
       - name: Run the Postman journey against a live HTTP server
@@ -29,3 +29,16 @@ jobs:
             sleep 1
           done
           npx --yes newman@6.2.3 run postman/Parcours-complet.postman_collection.json -e postman/Local.postman_environment.json --bail
+      - name: Build and smoke-test the Docker image
+        if: matrix.python == '3.12'
+        shell: bash
+        run: |
+          docker build --tag social-api:test .
+          docker run --detach --name social-api-test --publish 127.0.0.1:8001:8000 social-api:test
+          trap 'docker logs social-api-test; docker rm --force social-api-test' EXIT
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:8001/health; then break; fi
+            sleep 1
+          done
+          curl --fail --silent http://127.0.0.1:8001/health
+          test "$(docker exec social-api-test id -u)" = "10001"

@@ -53,4 +53,6 @@ supprime ses propres données sur la base cible ; utiliser une base de démonstr
 Les contrôles de concurrence ne constituent pas un benchmark de charge à grande échelle.
 
 Le workflow GitHub Actions vérifie Python 3.12, 3.13 et 3.14 et exécute aussi Newman.
+Sur Python 3.12, il construit aussi l'image Docker, démarre le conteneur, appelle
+/health et vérifie l'utilisateur non privilégié (UID 10001).
 Les résultats distants sont consultables dans l'onglet Actions du dépôt.
